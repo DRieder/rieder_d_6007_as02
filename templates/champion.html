@@ -1,0 +1,19 @@
+<ion-view title="{{champ.name}}">
+    <ion-content id='content'>
+      <div id="profilePic">
+      <img src='{{champ.thumb}}' alt='{{champ.name}}'></div>
+      <h2 id="champName">{{champ.name}}</h2>
+      <h3 id="champTitle">{{champ.title}}</h3>
+      <p id="champRole">{{champ.role}}</p>
+      <p id="champLore">{{champ.lore}}</p>
+
+      
+       <div class="row responsive-sm">
+        <div class="col champSkill"><img src='/img/skill/{{champ.skill0}}' alt='Champion Skill'></div>
+        <div class="col champSkill"><img src='/img/skill/{{champ.skill1}}' alt='Champion Skill'></div>
+        <div class="col champSkill"><img src='/img/skill/{{champ.skill2}}' alt='Champion Skills'></div>
+        <div class="col champSkill"><img src='/img/skill/{{champ.skill3}}' alt='Champion Skills'></div>
+        <div class="col champSkill"><img src='/img/skill/{{champ.skill4}}' alt='{{champ.skill4}}'></div>
+        </div>
+    </ion-content>
+  </ion-view>

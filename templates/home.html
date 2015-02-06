@@ -1,0 +1,33 @@
+<ion-view title="Champion List">
+<ion-pane id="content" data-ng-controller='listController'>
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">League of Legends Champions</h1>
+      </ion-header-bar>
+      <ion-content>
+      <ion-list>
+        <ion-item class="champ" ng-repeat="champ in champs">
+        <div class="row responsive-sm">
+        <div class="col champImages">
+          <img src='img/{{champ.thumb}}' alt='{{champ.name}}'>
+        </div>
+        <div class="col col-50"><p class="champsName">{{champ.name}}</p></div>
+        <div class="col">
+            <button href="#/detail/{{champ.id}}" class="button button-outline button-energized moreBtn">
+            More
+            </button>
+        </div>
+        </div>
+        </ion-item>
+      </ion-list> 
+</ion-content>
+</ion-view>
+<script>
+      var timeLine = new TimelineLite();
+      var champions = document.querySelectorAll('.champ');
+      for(var i = 0; i < champThumbs.length;i++){
+        console.log(champions[i].style.opacity);
+        timeLine.add(TweenMax.fromTo(champions[i], .5, {opacity:0}, {opacity:1}));
+      }
+
+
+</script>
